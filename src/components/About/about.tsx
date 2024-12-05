@@ -1,31 +1,3 @@
-// import './about.scss';
-// import '../../styles/global.scss';
-// import '../content/content.scss';
-
-// function AppAbout() {
-//   return (
-//     <section id="about">
-//       <div className="about-wrapper section-container">
-//         <span className="section-title text">
-//           About <span className="pink-title section-title text"> Me</span>
-//         </span>
-//         <span className="aboutPara">
-//           I'm a software engineer with a background in diverse
-//           programming languages, algorithms, and software development methods. I
-//           learned independently JavaScript, Node.js, React, and more. I have
-//           analytical thinking, problem-solving abilities, and effective
-//           communication skills, which enable me to work effectively both
-//           independently and as part of a team. I enjoy learning new things, new
-//           technologies and continuously seek opportunities to enhance my skills
-//           in the ever-evolving field of technology.
-//         </span>
-//       </div>
-//     </section>
-//   );
-// }
-
-// export default AppAbout;
-
 import './about.scss';
 import '../../styles/global.scss';
 import '../Content/content.scss';
@@ -51,7 +23,7 @@ function AppAbout() {
 
   return (
     <section id="about">
-      <div className="about-wrapper section-container">
+      <div className="about-wrapper section-container" style={{height:'100svh'}}>
         <span className="section-title text">
           About <span className="pink-title section-title text">Me</span>
         </span>
