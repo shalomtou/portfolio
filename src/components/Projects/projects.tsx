@@ -61,15 +61,12 @@ function AppProjects() {
       <Box className="projects-wrapper">
         <span
           className="section-title text"
-          style={{ margin: 'auto auto 2rem auto' }}
+          // style={{ margin: 'auto auto 2rem auto' }}
         >
           Projects
         </span>
-        <Container>
-          <Grid
-            container
-            spacing={3}
-          >
+        <Container style={{margin:'auto auto 2rem auto' ,height:'auto'}}>
+          <Grid container spacing={3}>
             {projects.map((project, index) => (
               <Grid item xs={12} sm={6} md={4} key={index}>
                 <Card
@@ -80,7 +77,7 @@ function AppProjects() {
                     justifyContent: 'space-between',
                     boxShadow: 3,
                     borderRadius: 2,
-                    padding:0,
+                    padding: 0,
                     transition: 'transform 0.3s',
                     '&:hover': {
                       transform: 'scale(1.05)',
@@ -124,8 +121,8 @@ function AppProjects() {
               </Grid>
             ))}
           </Grid>
-          <HighlightAchievement />
         </Container>
+        <HighlightAchievement />
       </Box>
     </section>
   );
