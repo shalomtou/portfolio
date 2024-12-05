@@ -91,7 +91,7 @@ function AppProjects() {
                     <Typography
                       variant="h5"
                       gutterBottom
-                      sx={{ fontWeight: 'bold', color: 'primary.main' }}
+                      // sx={{ fontWeight: 'bold', color: 'primary.main' }}
                       className="text"
                     >
                       {project.title}

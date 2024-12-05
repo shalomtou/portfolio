@@ -1,15 +1,16 @@
 .footer-wrapper {
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   height: 30px;
-   width: 100%;
-   position: fixed;
-   left: 0;
-   bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+  width: 100%;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  background-color: #f9f9f9;
 }
 
 .footer-para {
-   font-weight: 300;
-   font-size: 12px;
+  font-weight: 300;
+  font-size: 12px;
 }

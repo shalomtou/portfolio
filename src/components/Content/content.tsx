@@ -8,7 +8,7 @@ import { Container } from '@mui/material';
 
 function AppContent() {
   return (
-    <div className="menu-content" id="app-menu">
+    <div className="menu-content" id="app-menu" style={{top:'2rem'}}>
       <Container>
         <AppHome />
         <AppAbout />
