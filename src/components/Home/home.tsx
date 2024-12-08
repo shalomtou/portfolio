@@ -15,7 +15,7 @@ function AppHome() {
 
   return (
     <section id="home">
-      <div className="home-wrapper section-container" >
+      <div className="home-wrapper " >
         {/* Text Container */}
         <div className="home-text-container">
           <span className="text-hello">Hello,</span>

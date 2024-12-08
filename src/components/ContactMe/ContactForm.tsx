@@ -48,7 +48,6 @@ function ContactForm() {
         align="center"
         gutterBottom
         className="text"
-        // sx={{ fontWeight: "bold", marginBottom: 2 }}
       >
         Contact Me
       </Typography>

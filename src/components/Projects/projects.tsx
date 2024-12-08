@@ -8,7 +8,6 @@ import {
   Grid,
   IconButton,
   Container,
-  Box,
 } from '@mui/material';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import OpenInNewIcon from '@mui/icons-material/OpenInNew';
@@ -58,14 +57,10 @@ function AppProjects() {
 
   return (
     <section id="projects">
-      <Box
-        className="projects-wrapper"
-        sx={{ margin: '2rem auto', padding: '1rem' }}
-      >
-        <span className="section-title text">Projects</span>
-        <Box>
-          <HighlightAchievement />
-        </Box>
+      <div className="projects-wrapper">
+        <span className="section-title text">
+          Projects<span className="pink-title section-title">Set</span>
+        </span>
 
         <Container>
           <Grid container spacing={4}>
@@ -126,7 +121,9 @@ function AppProjects() {
             ))}
           </Grid>
         </Container>
-      </Box>
+
+        <HighlightAchievement />
+      </div>
     </section>
   );
 }

@@ -10,7 +10,7 @@ import NotFound from '../NotFound/NotFound';
 
 function AppContent() {
   return (
-    <div className="menu-content" id="app-menu" style={{ top: '2rem' }}>
+    <div className="menu-content">
       <Container>
         <Routes>
           <Route path="/" element={<AppHome />} />

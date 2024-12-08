@@ -23,7 +23,7 @@ function AppAbout() {
 
   return (
     <section id="about">
-      <div className="about-wrapper section-container" >
+      <div className="about-wrapper" >
         <span className="section-title text">
           About <span className="pink-title section-title ">Me</span>
         </span>
