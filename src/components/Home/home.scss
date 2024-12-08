@@ -1,109 +1,3 @@
-// @import '../../variables.scss';
-
-// .home-wrapper {
-//     display: flex;
-//     flex-direction: row;
-//     justify-content: space-between;
-//     align-items: center;
-//     width: 100%;
-//     display: flex;
-
-//     @media (max-width: 768px) {
-//         flex-direction: column;
-//         display: unset;
-//     }
-// }
-
-// .home-text-container {
-//     display: flex;
-//     flex-direction: column;
-//     text-align: left;
-//     margin-left: 15px;
-//     margin-bottom: 15px;
-//     width: 100%;
-
-//     @media (max-width: 768px) {
-//         text-align: center;
-//         margin-left: 15;
-//         width: 100%;
-//         height: 300px;
-//     }
-// }
-
-// .text-hello {
-//     font-size: 35px;
-//     font-weight: 300;
-//     text-align: left;
-
-//     @media (max-width: 768px) {
-//         font-size: 24px;
-//     }
-// }
-
-// .home-title {
-//     font-size: 95px;
-//     font-weight: 800;
-//     text-align: left;
-//     overflow: hidden;
-//     white-space: pre-line;
-//     min-height: 30svh;
-
-//     @media (max-width: 768px) {
-//         font-size: 60px;
-//     }
-// }
-
-// .role-title-color {
-//     color: $blue-color;
-// }
-
-// .home-image-container {
-//     display: flex;
-//     text-align: right;
-//     justify-content: center;
-//     display: flex;
-//     height: 330px;
-//     width: 380px;
-
-//     @media (max-width: 768px) {
-//         text-align: center;
-//         justify-content: center;
-//         height: 300px;
-//         width: 300px;
-//     }
-// }
-
-// .home-image {
-//     height: 320px;
-//     width: 340px;
-//     border-radius: 50%;
-//     margin-right: 80px;
-
-//     @media (max-width: 768px) {
-//         width: 150px;
-//         max-height: 150px;
-//         border-radius: 50%;
-//         margin-right: 0;
-//     }
-// }
-
-// .sub-typed-text{
-//     display: flex;
-//     min-height: 55svh !important;
-
-// }
-
-// .home-description{
-//     margin: 7svh auto 7svh 0;
-//     font-size: 2.2rem;
-//     word-break: keep-all;
-//     position: relative;
-//     @media (max-width: 768px) {
-//         margin: auto auto 2svh auto;
-//         font-size: 1.2rem;
-//     }
-// }
-
 @import '../../variables.scss';
 
 .home-wrapper {
@@ -158,17 +52,6 @@
   }
 }
 
-.sub-typed-text {
-  font-size: 2rem;
-  font-weight: 500;
-  margin-top: 20px;
-  min-height: 50px;
-
-  @media (max-width: 768px) {
-    font-size: 1.5rem;
-  }
-}
-
 .home-description {
   font-size: 1.5rem;
   font-weight: 400;
@@ -206,9 +89,20 @@
 }
 
 .sub-typed-text {
+  font-size: 2rem;
+  font-weight: 500;
+  margin-top: 20px;
+  min-height: 50px;
+
+  @media (max-width: 768px) {
+    font-size: 1.5rem;
+  }
+
   span {
     min-height: 22svh; /* Adjusted to be 55vh for consistent viewport height */
     display: flex; /* Ensures proper behavior for span elements */
+    justify-content: center;
+    align-items:center;
     @media (max-width: 768px) {
       min-height: 18svh;
       font-size: 3rem;

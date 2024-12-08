@@ -1,0 +1,21 @@
+.not-found-container {
+  background-color: #f9f9f9;
+  color: #333;
+
+  h1 {
+    font-size: 6rem;
+    font-weight: bold;
+  }
+
+  h5 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-bottom: 20px;
+  }
+
+  button {
+    font-size: 1rem;
+    padding: 10px 20px;
+    text-transform: none;
+  }
+}

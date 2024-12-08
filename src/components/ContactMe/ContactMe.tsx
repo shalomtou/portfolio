@@ -32,7 +32,7 @@ function AppContact() {
     <section id="contact" className="contact-section">
       <div className="contact-wrapper section-container" style={{height:'auto',margin:'3rem auto'}}>
         <h1 className="section-title text">
-          Contact<span className="pink-title">Me</span>
+          Contact<span className="pink-title section-title">Me</span>
         </h1>
         <div className="links-container">
           {socialLinks.map((link, index) => (

@@ -6,9 +6,9 @@ import './App.scss';
 function App() {
   return (
     <div className="app-warpper">
-        <AppNavbar />
-        <AppContent />
-        <AppFooter />
+      <AppNavbar />
+      <AppContent />
+      <AppFooter />
     </div>
   );
 }

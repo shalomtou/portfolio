@@ -1,5 +1,7 @@
 import { useState, useEffect } from 'react';
-import { Link } from 'react-scroll';
+import { useNavigate } from 'react-router-dom';
+// import { Link } from 'react-scroll';
+import { Link, NavLink } from 'react-router-dom';
 import {
   AppBar,
   Toolbar,
@@ -14,34 +16,26 @@ import Logo from '../../assets/black_logo.webp';
 import './navbar.scss';
 
 const menuItems = [
-  { label: 'Home', to: 'home' },
-  { label: 'About', to: 'about' },
-  { label: 'Skills', to: 'skills' },
-  { label: 'Projects', to: 'projects' },
-  { label: 'Contact', to: 'contact' },
+  { label: 'Home', to: '/' },
+  { label: 'About', to: '/about' },
+  { label: 'Skills', to: '/skills' },
+  { label: 'Projects', to: '/projects' },
+  { label: 'Contact', to: '/contact' },
 ];
 
 const AppNavbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [isNavbarVisible, setIsNavbarVisible] = useState(true);
-  const [lastScrollY, setLastScrollY] = useState(0);
+  const navigate = useNavigate();
 
   // Toggle mobile menu
   const toggleMobileMenu = () => {
     setMobileMenuOpen(!mobileMenuOpen);
   };
 
-  // Handle scroll behavior to hide or show navbar
-  useEffect(() => {
-    const handleScroll = () => {
-      const currentScrollY = window.scrollY;
-      setIsNavbarVisible(currentScrollY <= lastScrollY || currentScrollY < 64); // Show when scrolling up
-      setLastScrollY(currentScrollY);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, [lastScrollY]);
+  const handleNavigateHome = () => {
+    navigate('/'); // Navigate to the homepage
+  };
 
   return (
     <>
@@ -57,8 +51,8 @@ const AppNavbar = () => {
           <Box
             display="flex"
             alignItems="center"
-            style={{ cursor: 'pointer' }}
-            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+            sx={{ cursor: 'pointer' }} // Material-UI recommended styling approach
+            onClick={handleNavigateHome}
           >
             <img
               src={Logo}
@@ -79,15 +73,8 @@ const AppNavbar = () => {
                   gap: '8px',
                 }}
               >
-                <Link
-                  activeClass={false ? 'active-menu-icon' : 'active'}
-                  containerId="app-menu"
+                <NavLink
                   to={item.to}
-                  spy={true}
-                  hashSpy={false}
-                  spyThrottle={0}
-                  offset={0}
-                  duration={500}
                   style={{
                     textDecoration: 'none',
                     color: 'inherit',
@@ -97,7 +84,7 @@ const AppNavbar = () => {
                   }}
                 >
                   {item.label}
-                </Link>
+                </NavLink>
               </MenuItem>
             ))}
           </Box>
@@ -123,15 +110,8 @@ const AppNavbar = () => {
                 gap: '8px',
               }}
             >
-              <Link
-                activeClass={false ? 'active-menu-icon' : 'active'}
-                containerId="app-menu"
+              <NavLink
                 to={item.to}
-                spy={true}
-                hashSpy={false}
-                spyThrottle={0}
-                offset={0}
-                duration={500}
                 style={{
                   textDecoration: 'none',
                   color: 'inherit',
@@ -141,7 +121,7 @@ const AppNavbar = () => {
                 }}
               >
                 {item.label}
-              </Link>
+              </NavLink>
             </MenuItem>
           ))}
         </List>

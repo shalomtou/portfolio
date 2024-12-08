@@ -43,7 +43,7 @@ const icons: CustomIcon[] = [
 
 function AppSkills() {
   return (
-    <section id="skills">
+    <section id="skills" style={{margin:'2rem auto'}}>
       <div className="skills-wrapper section-container" style={{height:"auto"}}>
         <span className="section-title text">
           Skill<span className="pink-title section-title">Set</span>

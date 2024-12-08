@@ -23,34 +23,34 @@ function AppProjects() {
     {
       title: 'Image Gallery',
       description:
-        'Photos Albums is a React application that allows users to create and view photo albums. Users can create their own albums, upload photos, and share them with others. The application provides a delightful and attractive design to keep viewers astonished and curious to see more albums.',
+        'A React app for creating and viewing photo albums with a delightful design that keeps users engaged.',
       githubUrl: 'https://github.com/shalomtou/album-gallery',
       demoUrl: 'https://album-gallery-sable.vercel.app/',
     },
     {
       title: 'Task Manager',
       description:
-        'This project is a full-stack web application for managing user tasks. It is built using the latest web development technologies and follows the Model-View-Controller (MVC) design pattern for ease of maintenance and reusability.',
+        'A full-stack web app for managing tasks, built using modern web development technologies.',
       githubUrl: 'https://github.com/shalomtou/task-manager',
       demoUrl: 'https://github.com/shalomtou/task-manager',
     },
     {
       title: 'Image Slider',
       description:
-        'This repository contains a frontend application developed in React.js for creating an image slider component. The application fetches data from a remote endpoint and dynamically populates the image slider based on the fetched data. Additionally, it implements a caching layer using IndexedDB to reduce memory consumption and improve performance.',
+        'A frontend app in React.js for creating a dynamic image slider component with caching and improved performance.',
       githubUrl: 'https://github.com/shalomtou/image-slider',
       demoUrl: 'https://image-slider-seven-black.vercel.app/',
     },
     {
       title: 'Dummy Backend Server',
-      description: "A 'dummy' backend server written in NodeJS with TS.",
+      description:
+        'A simple backend server written in Node.js with TypeScript.',
       githubUrl: 'https://github.com/shalomtou/dummy-server',
       demoUrl: 'https://dummy-server-mu.vercel.app/',
     },
     {
       title: 'Proxy Server',
-      description:
-        'This is a simple proxy server, which can be used as an online proxy.',
+      description: 'A lightweight proxy server for online use.',
       githubUrl: 'https://github.com/shalomtou/proxy-server',
       demoUrl: 'https://proxy-server-fawn-six.vercel.app/',
     },
@@ -58,38 +58,40 @@ function AppProjects() {
 
   return (
     <section id="projects">
-      <Box className="projects-wrapper">
-        <span
-          className="section-title text"
-          // style={{ margin: 'auto auto 2rem auto' }}
-        >
-          Projects
-        </span>
-        <Container style={{margin:'auto auto 2rem auto' ,height:'auto'}}>
-          <Grid container spacing={3}>
+      <Box
+        className="projects-wrapper"
+        sx={{ margin: '2rem auto', padding: '1rem' }}
+      >
+        <span className="section-title text">Projects</span>
+        <Box>
+          <HighlightAchievement />
+        </Box>
+
+        <Container>
+          <Grid container spacing={4}>
             {projects.map((project, index) => (
               <Grid item xs={12} sm={6} md={4} key={index}>
                 <Card
                   sx={{
-                    height: '100%', // Ensure all cards have the same height
+                    height: '100%',
                     display: 'flex',
                     flexDirection: 'column',
                     justifyContent: 'space-between',
-                    boxShadow: 3,
+                    boxShadow: 4,
                     borderRadius: 2,
-                    padding: 0,
-                    transition: 'transform 0.3s',
+                    transition: 'transform 0.3s, box-shadow 0.3s',
                     '&:hover': {
-                      transform: 'scale(1.05)',
+                      transform: 'translateY(-5px)',
+                      boxShadow: 6,
                     },
                   }}
                 >
-                  <CardContent>
+                  <CardContent className="text">
                     <Typography
-                      variant="h5"
+                      variant="h6"
                       gutterBottom
-                      // sx={{ fontWeight: 'bold', color: 'primary.main' }}
                       className="text"
+                      sx={{ fontWeight: 'bold', color: 'text.primary' }}
                     >
                       {project.title}
                     </Typography>
@@ -99,20 +101,22 @@ function AppProjects() {
                   </CardContent>
                   <CardActions
                     sx={{
-                      justifyContent: 'space-between',
-                      // paddingX: 2,
-                      marginTop: 'auto', // Ensures buttons are aligned at the bottom
+                      display: 'flex',
+                      justifyContent: 'flex-end',
+                      padding: '0 1rem 1rem',
                     }}
                   >
                     <IconButton
                       color="primary"
                       onClick={() => handleButtonClick(project.githubUrl)}
+                      title="View GitHub Repository"
                     >
                       <GitHubIcon />
                     </IconButton>
                     <IconButton
                       color="secondary"
                       onClick={() => handleButtonClick(project.demoUrl)}
+                      title="View Demo"
                     >
                       <OpenInNewIcon />
                     </IconButton>
@@ -122,7 +126,6 @@ function AppProjects() {
             ))}
           </Grid>
         </Container>
-        <HighlightAchievement />
       </Box>
     </section>
   );

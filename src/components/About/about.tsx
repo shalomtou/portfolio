@@ -23,9 +23,9 @@ function AppAbout() {
 
   return (
     <section id="about">
-      <div className="about-wrapper section-container" style={{height:'100svh'}}>
+      <div className="about-wrapper section-container" >
         <span className="section-title text">
-          About <span className="pink-title section-title text">Me</span>
+          About <span className="pink-title section-title ">Me</span>
         </span>
         <span className="aboutPara">
           I am a software engineer skilled in programming languages, algorithms,
